@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="pl"> 
+<head> 
+	<meta charset="utf-8"/>
+	<title> AZET - Twój Osobisty Budżet Domowy  </title>
+	<meta name = "description" content ="Osobisty Budżet Domowy " />
+	<meta name= "keywords" content=" oszczędzanie, budżet, domowy budżet, saldo, bilans, wydatek, przychód" />
+	<meta http-equiv ="X-UA-Compatible" content  = "IE=edge,chrome =1" />
+	
+	<link rel= "stylesheet" href="menu_glowne.css" type="text/css" />
+	
+	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href = "css/fontello.css" type="text/css"/>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+	  
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Kategoria', 'wydarki(w zł)'],
+          ['Kategoria1',  199],
+          ['Kategoria2',  786],
+          ['Kategoria3', 100],
+          ['Kategoria4', 234]
+        ]);
+
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        title: 'Twoje wydatki w danym okresie',
+        pieStartAngle: 100,
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+	
+</head>
+
+<body> 
+
+	<header>
+		<div id="topNav1"> 
+			<h1 class="logo"> <i class="icon-money"></i>  
+			AZET - Twój Osobisty Budżet Domowy <i class="icon-money"> </i></h1>
+		</div>
+		
+		<div id="topNav2"> 
+			<ul class="topMenu">
+				<li> <a href="#"> Wyloguj </a> </li>
+			</ul>
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		<div class = "sideNav">
+			<a href = "dodaj_wydatek.html" class="link"> <div class="option">  <i class = "icon-edit"> </i>Dodaj Wydatek  </div></a>
+			
+			<div style="margin-top:10px;" > </div>
+			<a href = "dodaj_wplyw.html" class="link"> <div class="option"><i class = "icon-edit"> </i>Dodaj Przychód </div> </a>
+			
+			<div style="margin-top:10px;" > </div>
+			<a href = "bilans.html" class="link"> <div class="option"> <i class="icon-chart-bar"> </i>Przeglądaj Bilans </div> </a>
+			
+			<div style="margin-top:10px;" > </div>
+			<a href = "ustawienia.html" class="link"> <div class="option"> <i class="icon-cogs"> </i>Ustawienia </div> </a>
+		</div>
+	</header>
+	
+	<main>
+			
+			<div class="content">
+					<section>
+							<div id = "wybor">
+								<fieldset style="border:none;">
+									<legend>Wybierz okres na bilans:  </legend>	
+									<div class="col-bilans"> <label> <input type="radio" name ="wybor" value="1" >   Poprzedni  </label> </div>
+									<div  class="col-bilans"> <label> <input type="radio" name ="wybor" value="1"  >  Bierzący miesiąc  </label> </div>
+									<div  class="col-bilans"> <label> <input type="radio" name ="wybor" value="1" >   Następny  </label> </div>
+									<div  class="col-bilans"> <label> <input type="radio" name ="wybor" value="1" >   Niestandardowy  </label> </div>
+								</fieldset>
+							</div>
+						
+					</section>
+					
+				<section>
+						<div class="tabela" style="float:left">
+								<table>
+									<tr> <th>Lp.</th><th>Kategoria przychodu </th> <th>Kwota</th> </tr>
+									<tr> <td>1.</td> <td> Kategoria1  </td> <td> xxx zł  </td>  </tr>
+									<tr> <td>2.</td> <td> Kategoria2 </td> <td> xxx zł  </td>  </tr>
+									<tr> <td>3.</td> <td> Kategoria3</td> <td> xxx zł  </td> </tr>
+									<tr style="border-bottom: 2px solid #000000;"> <td>4.</td> <td> Kategoria4 </td> <td> xxx zł  </td> </tr>
+									<tr> <td colspan ="2" style="color:#293e6a; font-weight:700;">Sumarycznie wpłyneło: </td> <td style="color:#293e6a; font-weight:700;"> xxx zł  </td> </tr>		
+								</table>
+							
+							</div >
+							
+							<div class="tabela" style="float:left"> 
+
+								<table>
+									<tr> <th>Lp.</th><th>Kategoria wydatku</th> <th>Kwota</th>  </tr>
+									<tr> <td>1.</td> <td> Kategoria1  </td> <td> xxx zł  </td>  </tr>
+									<tr> <td>2.</td> <td> Kategoria2 </td> <td> xxx zł  </td>  </tr>
+									<tr> <td>3.</td> <td> Kategoria3</td> <td> xxx zł  </td> </tr>
+									<tr  style="border-bottom: 2px solid #000000;"> <td>4.</td> <td> Kategoria4 </td> <td> xxx zł  </td> </tr>
+									<tr> <td colspan ="2" style="color:#293e6a; font-weight:700;">Sumarycznie wydano: </td> <td style="color:#293e6a; font-weight:700;"> xxx zł  </td> </tr>
+								</table>
+																	
+							</div>
+							
+							<div id="piechart" ></div>
+
+				</section>
+			</div>	
+	</main>
+	
+				<div style="clear:both"></div>
+				
+	<footer>
+		<div class ="info">
+				Wszelkie prawa zastrzeżone &copy;
+		</div>
+	</footer>
+	
+
+</body>
+</html>

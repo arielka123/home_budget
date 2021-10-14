@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="pl"> 
+<head> 
+	<meta charset="utf-8"/>
+	<title> AZET - Twój Osobisty Budżet Domowy  </title>
+	<meta name = "description" content ="Osobisty Budżet Domowy " />
+	<meta name= "keywords" content=" oszczędzanie, budżet, domowy budżet, saldo, bilans, wydatek, przychód" />
+	<meta http-equiv ="X-UA-Compatible" content  = "IE=edge,chrome =1" />
+	
+	<link rel= "stylesheet" href="menu_glowne.css" type="text/css" />
+	
+	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href = "css/fontello.css" type="text/css"/>
+	<script type="text/javascript" src ="present_day.js"> </script>
+
+	
+</head>
+
+<body onload="set_today()"> 
+
+	<header>
+		<div id="topNav1"> 
+			<h1 class="logo"> <i class="icon-money"></i>  
+			AZET - Twój Osobisty Budżet Domowy <i class="icon-money"> </i></h1>
+		</div>
+		
+		<div id="topNav2"> 
+			<ul class="topMenu">
+				<li> <a href="#"> Wyloguj </a> </li>
+			</ul>
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		<div class = "sideNav">
+			<a href = "dodaj_wydatek.html" class="link"> <div class="option">  <i class = "icon-edit"> </i>Dodaj Wydatek  </div></a>
+			
+			<div style="margin-top:10px;" > </div>
+			<a href = "dodaj_wplyw.html" class="link"> <div class="option"><i class = "icon-edit"> </i>Dodaj Przychód </div> </a>
+			
+			<div style="margin-top:10px;" > </div>
+			<a href = "bilans.html" class="link"> <div class="option"> <i class="icon-chart-bar"> </i>Przeglądaj Bilans </div> </a>
+			
+			<div style="margin-top:10px;" > </div>
+			<a href = "ustawienia.html" class="link"> <div class="option"> <i class="icon-cogs"> </i>Ustawienia </div> </a>
+			<div style="clear:both"></div>
+
+		</div>		
+	</header>
+	
+	<main>
+		<article>
+			<div class="content">
+						<div id="tytul"> Dodaj Nowy Przychód </div>
+						<form action="order.php" method="post" enctype="multipart/form-data" >						
+
+							<div class= "row">
+								<div class="col-label">
+									<label for ="today"> Data</label>
+								</div>
+								<div class="col-input">
+									 <input type="date"  id = "today" name="date" readonly >
+								</div>
+							</div>	
+							
+							<div style="clear:both"> </div>
+							
+							<div class = "row">
+								<div class="col-label">
+									<label for ="kwota">Kwota w zł: </label>
+								</div>
+								<div class="col-input">
+									<input type="text" name= "kwota" > 
+								</div>
+							</div>
+						
+							<div style="clear:both"></div>
+							
+							<div class= "row">
+								<fieldset>
+										<legend>Kategoria: </legend>			
+										<div> <label> <input type="radio" name ="wplyw" value="1" > Wynagrodzenie  </label> </div>
+										<div> <label> <input type="radio" name ="wplyw" value="1"  >  Odsetki bankowe  </label> </div>
+										<div> <label> <input type="radio" name ="wplyw" value="1" > Sprzedaż na allegro  </label> </div>
+										<div> <label> <input type="radio" name ="wplyw" value="1" > Inne  </label> </div>
+								</fieldset>
+							</div>							
+							
+							<div class= "row">
+								<div><label for ="komentarz"> Komentarz (opcjonalnie): </label> </div>
+								<textarea name="komentarz" id="komentarz" rows="4" cols="80" maxlength ="30" minlength ="5"></textarea>
+							</div>
+			
+							<div class = "row">
+								 <input type="submit" value= "DODAJ" > 
+								 <input type="reset" value= "ANULUJ" > 
+							</div>
+							
+							
+						</form>
+						
+
+			</div>
+			<div style="clear:both"></div>
+			
+
+		</article>
+	</main>
+	
+	
+	<footer>
+		<div class ="info">
+				Wszelkie prawa zastrzeżone &copy;
+		</div>
+	</footer>
+	
+
+</body>
+</html>
